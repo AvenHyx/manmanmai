@@ -1,0 +1,50 @@
+.coupon-product {
+  background-color: #fff;
+}
+.coupon-product .cou-text {
+  font-size: 0.16rem;
+  text-align: center;
+  color: #999;
+  margin: 0.10666667rem 0rem;
+}
+.coupon-list .coupon-li {
+  border-bottom: 0.01333333rem solid #e7e7e7;
+  background-size: 0.26666667rem 0.26666667rem;
+  background-position: right center;
+}
+.coupon-list .coupon-li .coupon-tit {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 0.13333333rem;
+  box-sizing: content-box;
+}
+.coupon-list .coupon-li .coupon-tit .cou-pic {
+  width: 1.33333333rem;
+  height: 1.06666667rem;
+  margin-right: 0.13333333rem;
+  float: left;
+}
+.coupon-list .coupon-li .coupon-tit .cou-pic img {
+  max-width: 1.33333333rem;
+  height: auto;
+}
+.coupon-list .coupon-li .coupon-tit .cou-info {
+  padding-right: 0.4rem;
+  overflow: hidden;
+  font-size: 0.16rem;
+  line-height: 0.32rem;
+}
+.coupon-list .coupon-li .coupon-tit .cou-info .tit h3 {
+  color: #666;
+  line-height: 0.26666667rem;
+  font-weight: normal;
+}
+.coupon-list .coupon-li .coupon-tit .cou-info .tit h2 {
+  font-size: 0.18666667rem;
+}
+.coupon-list .coupon-li .coupon-tit .cou-info .time {
+  font-size: 0.16rem;
+  color: #EE7700;
+  margin-top: 0.13333333rem;
+}

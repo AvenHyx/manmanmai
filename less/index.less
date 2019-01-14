@@ -1,0 +1,169 @@
+@import "base";
+@import "normalize";
+@import "common";
+/*产品列表页*/
+@import "cate-list";
+/*产品详情页*/
+@import "productList";
+/*产品比价页面*/
+@import "bijia";
+/*省钱控页面*/
+@import "moneyctrl";
+/*国内折扣页面*/
+@import "inlanddiscount";
+/*首页国内折扣跳转*/
+@import "moneyproduct";
+/*优惠券页面*/
+@import "coupon";
+/*优惠券详情页面*/
+@import "couponproduct";
+/*白菜价页面*/
+@import "baicaijia";
+/*凑单品页面*/
+@import "gsproduct";
+/*商场导航*/
+@import "sitenav";
+/*品牌排行*/
+@import "brandTilte";
+/*品牌评论列表*/
+@import "brand";
+// @import "/@base2rem";
+
+// 用法：
+   // 使用例子 1：高度量出来 88/@base =>  height: 88*@rem;
+    //使用例子 2：字体大小 14px   =>  .font-size(14);
+
+// @byColor:#FF841D;
+// 用法：
+  //  使用例子 1：高度量出来 88px =>  height: 88*@rem;
+  //  使用例子 2：字体大小 14px   =>  .font-size(14);
+
+// .footer{
+//     height: 200*@rem;
+//     .font-size(14);
+// }
+@design:750;
+@base:75rem;
+@byColor:#FF841D;
+
+    /*导航栏*/
+    .nav{
+        background-color: #F1F1F1;
+        padding-top: 10/@base;
+        padding-bottom: 5/@base;
+        .menu{
+            width: 100%;
+            background-color: #fff;
+            li{
+                width: 25%;
+                float: left;
+                margin-top: 15/@base;
+                text-align: center;
+                a{
+                    padding:10/@base;
+                    display: block;
+                    img{
+                        width: 50/@base;
+                        height:50/@base;
+                        margin: 0 auto;
+                    }
+                    p{
+                     padding-top:10/@base;
+                     font-size: 12/@base;
+                     text-align: center;
+                    }
+                }
+
+            }
+        }
+    }
+
+/*超值推荐*/
+.introduce{
+    width: 100%;
+    background: linear-gradient(to bottom,#ffaf47,#ff9000);
+}
+// 空着
+.list-product{
+    background-color: #fff;
+    width: 100%;
+    li{
+        padding: 15/@base;
+        border-bottom: 1/@base solid #ccc;
+        .pro-img{
+            float: left;
+            width: 110/@base;
+            img{
+                width: 100/@base;
+                height: 100/@base;
+            }
+        }
+        .info{
+           width: 80%;
+           float: left;
+           padding-left:15/@base;
+           height: 100/@base;
+        //    background-color: @byColor;
+        .pro{
+            color: @byColor;
+        }
+           a{
+               display: block;
+               font-size: 14/@base;
+               span{
+                   color: #ccc;
+               }
+           }
+           .shopping{
+            margin-top: 40/@base;
+            a{
+                font-size: 12/@base;
+                color: #666;
+                .sh-left{
+                    float: left
+                }
+                .sh-right{
+                    float: right;
+                    padding-right: 15/@base;
+                }
+            }
+           }
+        }
+    }
+    
+}
+.list-more{
+   height: 40/@base;
+  line-height: 40/@base;
+   a{
+   display: block;
+    width: 100%;
+    height: 32/@base;
+    text-align: center;
+    font-size: 13/@base;
+   } 
+    
+}
+.list-content{
+    width: 100%;
+    height: 35/@base;
+    background: linear-gradient(to bottom,#ffaf47,#ff9000);
+    span{
+        font-size: 16/@base;
+        color: #fff;
+        padding: 10/@base;
+        line-height: 35/@base;
+    }
+    img{
+        width: 20/@base;
+        height: 20/@base;
+        color: #fff;
+        float: right;
+        margin-top:10/@base;
+        margin-right: 8/@base;
+    }
+}
+
+
+
+

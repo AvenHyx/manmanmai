@@ -1,0 +1,106 @@
+.ctrl-container {
+  background-color: #fff;
+}
+.ctrl-header {
+  height: 0.58666667rem;
+  background-color: #ff841d;
+  color: #fff;
+  width: 100%;
+  padding-right: 0.66666667rem;
+  padding-left: 0.66666667rem;
+  position: relative;
+}
+.ctrl-header p {
+  margin: 0;
+  font-size: 0.24rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 0.58666667rem;
+}
+.ctrl-header a {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 0.66666667rem;
+  height: 0.58666667rem;
+  text-align: center;
+  line-height: 0.58666667rem;
+}
+.ctrl-header a i {
+  font-size: 0.21333333rem;
+  color: #fff;
+}
+/*复用index页面*/
+.list-product {
+  background-color: #fff;
+  width: 100%;
+}
+.list-product li {
+  padding: 0.2rem;
+  border-bottom: 0.01333333rem solid #cccccc;
+}
+.list-product li .pro-img {
+  float: left;
+  width: 1.46666667rem;
+}
+.list-product li .pro-img img {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+}
+.list-product li .info {
+  width: 80%;
+  float: left;
+  padding-left: 0.2rem;
+  height: 1.33333333rem;
+}
+.list-product li .info .pro {
+  color: #ff841d;
+}
+.list-product li .info a {
+  display: block;
+  font-size: 0.18666667rem;
+}
+.list-product li .info a span {
+  color: #ccc;
+}
+.list-product li .info .shopping {
+  margin-top: 0.53333333rem;
+}
+.list-product li .info .shopping a {
+  font-size: 0.16rem;
+  color: #666;
+}
+.list-product li .info .shopping a .sh-left {
+  float: left;
+}
+.list-product li .info .shopping a .sh-right {
+  float: right;
+  padding-right: 0.2rem;
+}
+/*复用分页*/
+/*分页*/
+.page {
+  margin-top: 0.13333333rem;
+  background-color: #fff;
+}
+.page .w33 {
+  width: 33.3%;
+  float: left;
+  text-align: center;
+}
+.page a {
+  background-color: #d4d4d4;
+  background: linear-gradient(to bottom, #f1f1f1, #d4d4d4);
+  border-radius: 0.06666667rem;
+  line-height: 0.42666667rem;
+  font-size: 0.18666667rem;
+  padding: 0.10666667rem 0.26666667rem;
+  box-shadow: 0 0 0.01333333rem #666666;
+  text-align: center;
+}
+#selectPage {
+  border: 0.01333333rem solid #bababa;
+  font-size: 0.21333333rem;
+  height: 0.48rem;
+  padding: 0.10666667rem 0.2rem;
+}

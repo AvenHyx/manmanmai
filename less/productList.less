@@ -1,0 +1,99 @@
+
+// 列表页渲染
+@design:750;
+@base:75rem;
+@byColor:#FF841D;
+.product-list-title{
+    background-color: #ebebeb;
+    height: 38/@base;
+    background-image:linear-gradient(to bottom,#ebebeb,#fff,#ccc);
+    border-top: 1/@base solid #ebebeb;
+    border-bottom: 1/@base solid #ccc;
+    line-height: 36/@base;
+    padding-left:8/@base;
+    font-size: 14/@base;
+    .select{
+        float: right;
+        margin-right: 8/@base;
+        height: 28/@base;
+        line-height: 28/@base;
+        display: block;
+        background-color: #d0d0d0;
+        background: linear-gradient(to bottom, #d7d7d7,#f5f5f5);
+        border-bottom:1/@base solid #bababa;
+        padding:0 16/@base;
+        box-shadow: 0 1/@base 2/@base #888;
+        text-align: center;
+        border-radius: 5/@base;
+        font-size: 14/@base;
+        margin-top: 4/@base;
+        border:none;
+    }
+}
+.list-product{
+    background-color: #fff;
+    width: 100%;
+    a{
+        display: block;
+    }
+    li{
+        padding: 15/@base;
+        border-bottom: 1/@base solid #ccc;
+        .pro-img{
+            float: left;
+            width: 110/@base;
+            img{
+                width: 100/@base;
+                height: 100/@base;
+            }
+        }
+        .info{
+           width: 80%;
+           float: left;
+           padding-left:15/@base;
+           height: 100/@base;
+            .price{
+                margin-top: 25/@base;
+               font-size: 18/@base;
+               color:#ea3900;
+               vertical-align:middle;
+              }
+            .other{
+                margin-top: 10/@base;
+               font-size: 12/@base;
+               color: #a1a1a1;
+               em:first-child{
+                   margin-right: 10/@base;
+               }
+              }
+           }
+        }
+    }
+    
+/*分页*/
+.page{
+    margin-top:10/@base;
+    background-color: #fff;
+  .w33{
+    width: 33.3%;
+    float: left;
+    text-align: center;
+  }
+  
+  a{
+      background-color: #d4d4d4;
+      background: linear-gradient(to bottom,#f1f1f1,#d4d4d4);
+      border-radius:5/@base;
+      line-height: 32/@base;
+      font-size: 14/@base;
+      padding: 8/@base 20/@base;
+      box-shadow: 0 0 1/@base #666;
+      text-align: center;
+  }
+}
+#selectPage{
+    border:1/@base solid #bababa;
+    font-size: 16/@base;
+    height: 36/@base;
+    padding: 8/@base 15/@base;
+}

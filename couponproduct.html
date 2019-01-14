@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>couponproduct</title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="coupon-container">
+        <!-- 头部区域 -->
+        <div class="ctrl-header">
+            <a href="javascript:history.go(-1);"><i class="fa fa-chevron-left"></i></a>
+            <p>国内折扣</p>
+            <div class="appdown">
+                <a href="javascript:;" title="手机app下载">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 主要页面 -->
+        <main class="coupon-product">
+            <div class="cou-text">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+            <div class="coupon-list">
+                <ul class="clearfix">
+                        <!-- 模板引擎渲染 -->
+                </ul>
+            </div>
+        </main>
+
+        <!-- 底部公共类 -->
+       <div class="footer">
+            <div class="foot-top">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#" class="icon_top"><img src="./images/top.jpg" >返回顶部</a>
+            </div>
+            <div class="footer-bottom">
+                <p><span>手机APP下载</span> 慢慢买手机版 -- 掌上平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+      </div>    
+    </div>
+
+<!-- 模态框 -->
+<!-- <div class="modal-pic" style="display:none"> <img src="./images/more.png" alt=""> </div> -->
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script> 
+    <script src="./js/common.js"></script>
+    <script src="./js/couponproduct.js"></script>
+
+    <script type="text/html" id="couponTpl">
+    {{each result v i}}
+        <li class="coupon-li">
+            <a href="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" title=" 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券" class="coupon-tit">
+               <div class="cou-pic">{{# v.couponProductImg}}</div>
+               <div class="cou-info">
+                   <div class="tit">
+                       <h3>{{v.couponProductName}}</h3>
+                       <h2>{{v.couponProductPrice}}</h2>
+                   </div>
+                   <div class="time">{{v.couponProductTime}}</div>
+               </div> 
+            </a>
+        </li>
+    {{/each}}
+    </script>
+</body>
+

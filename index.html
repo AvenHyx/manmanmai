@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>慢慢买 </title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- 初始化根字体大小, 最好放在最前面, 引包之后, 动态的设置了 html 根字体大小 -->
+  <script src="./lib/flexible/flexible.js"></script>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+    
+</head>
+<body>
+    <div class="container">
+        <!-- 头部区域 -->
+        <div class="header" class="clearfix">
+            <div class="logo">
+                <a href="index.html" title="慢慢买">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+            </div>
+            <div class="appdown">
+                <a href="javascript:;" title="手机app下载">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="search">
+            <form action="" class="search_ipt">
+                <input type="text" placeholder="请输入你想比价的商品" class="ipt">
+                <input type="button" value="搜索" class="val">
+            </form>
+        </div>
+        <!-- 导航区域 -->
+        <div class="nav">
+            <div class="menu">
+                <ul class="clearfix template-list">
+                    
+                    <!-- 挖个坑 进行模板引擎渲染 -->
+                                
+                </ul>
+            </div>
+        </div>
+        <!-- 超值推荐 -->
+          <div class="introduce"> 
+             <div class="list-content">
+                 <span>超值折扣推荐</span>
+                <img src="./images/more.png" alt="">
+             </div> 
+        </div> 
+        <div class="list-product ">     
+            <ul class="list-pro-tem">
+                <!-- 挖坑 渲染清单折扣列表 -->
+
+            </ul>  
+            <div class="list-more">
+                    <a href="#"><p>更多优惠信息 >></p> </a>
+            </div>
+        </div>
+        <!-- 品牌排行 -->
+        <div class="brand">
+                <div class="list-content">
+                    <span>品牌排行</span>
+                    <img src="./images/more.png" alt="">
+                </div>
+        </div>
+        <!-- 底部区域 -->
+        <div class="footer">
+            <div class="foot-top">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#" class="icon_top"><img src="./images/top.jpg" >返回顶部</a>
+            </div>
+            <div class="footer-bottom">
+                <p><span>手机APP下载</span> 慢慢买手机版 -- 掌上平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>     
+    </div>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/index.js"></script>
+
+    <script type="text/html" id="menuTpl">
+    {{each result v i }}
+        <li data-id = "{{v.indexmenuId}}" style="display:{{i>7?'none':'block'}}" data-type="{{i >7 ? '1':''}}">
+            <a href="{{v.titlehref}}">
+                {{# v.img}}
+                <p>{{v.name}}</p>
+            </a>
+        </li>
+    {{/each}}
+    </script>
+
+
+    <script type="text/html" id="listTpl">
+    {{each result v i}}
+    <li class="clearfix">
+            <a href="moneyproduct.html?productid={{v.productId}}"><div class="pro-img">{{#v.productImgSm}}</div></a>
+            <div class="info">
+                <a href="#" >{{v.productName}} <span class="pro">{{v.productPinkage}}</span></a>
+                <div class="shopping">
+                    <a href="#">
+                        <span class="sh-left">{{v.productFrom}}| {{v.productTime}}</span>
+                        <span class="sh-right">{{v.productComCount}}</span>
+                    </a>
+                </div>
+            </div> 
+    </li>
+    {{/each}}
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.coupon-container .ctrl-header {
+  background-color: #f4483e;
+}
+.coupon-container .coupon-title ul {
+  padding-top: 0.13333333rem;
+  padding-bottom: 0.13333333rem;
+}
+.coupon-container .coupon-title ul li {
+  float: left;
+  list-style: none;
+  margin: 0;
+  width: 1.50666667rem;
+  margin-left: 0.06666667rem;
+  margin-top: 0.06666667rem;
+  display: block;
+  padding-top: 0.06666667rem;
+  text-align: center;
+  font-size: 0.16rem;
+  border: 0.01333333rem solid #eeeeee;
+  overflow: hidden;
+}
+.coupon-container .coupon-title ul li a img {
+  width: 0.66666667rem;
+  max-height: 0.66666667rem;
+  margin: 0 auto;
+}
+.coupon-container .coupon-title ul li p {
+  margin-top: 0.06666667rem;
+}

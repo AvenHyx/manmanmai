@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>discount</title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<div class="money-container">
+    <!-- 头部区域 -->
+    <div class="ctrl-header">
+        <a href="javascript:history.go(-1);"><i class="fa fa-chevron-left"></i></a>
+        <p>国内折扣</p>
+        <div class="appdown">
+            <a href="javascript:;" title="手机app下载">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!-- 中间区域 -->
+   <section id="money-main">
+       <div class="container">
+           <div class="money-content clearfix">
+               <!-- 模板引擎渲染 -->
+           </div>
+           <!-- 渲染城市区域的 -->
+           
+             <!--渲染评论页面  -->
+       </div>
+   </section>
+
+   <!-- 底部公共类 -->
+   <div class="footer">
+        <div class="foot-top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#" class="icon_top"><img src="./images/top.jpg" >返回顶部</a>
+        </div>
+        <div class="footer-bottom">
+            <p><span>手机APP下载</span> 慢慢买手机版 -- 掌上平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+   </div> 
+</div>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script> 
+<script src="./js/common.js"></script>
+<script src="./js/discount.js"></script>   
+
+<script type="text/html" id="moneyProTpl">
+{{each result v i}}
+    <h3 class="title">{{v.productName}}</h3>
+    <div class="info">
+        <span class="mall">{{v.productFrom}}</span>
+        <span class="time">{{v.productTime}}</span>
+        <span class="author">{{v.productTips}}</span>
+    </div>
+    <div class="content clearfix">
+        <div class="content-img ">
+            {{# v.productImg}}
+        </div>
+        <div class="content-write">
+            <p>{{v.productInfo}}</p>
+            <p>{{v.productPrice}}</p>
+            <p>{{# v.productImg}}</p>
+        </div>
+        <div class="going">
+            <a href="#">前往购买</a>
+        </div>
+    </div>
+    <div class="erweima">
+            <img src="./images/mmbweixin2.png" alt="">
+        </div>
+        <div class="money-comment">
+            {{# v.productComment}}
+        </div>   
+ {{/each}}   
+</script>
+</body>

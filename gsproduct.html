@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gsproduct</title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+    <div class="gs-container">
+        <!-- 头部区域 -->
+        <div class="ctrl-header">
+                <a href="index.html"><i class="fa fa-chevron-left"></i></a>
+                <p>凑单品</p>
+                <div class="appdown">
+                    <a href="javascript:;" title="手机app下载">
+                        <img src="./images/header_app.png" alt="">
+                    </a>
+                </div>
+        </div>
+        <!-- 中间区域 -->
+        <main class="gs-product">
+           <div class="product-list clearfix">
+                <div class="pro-nav ">
+                    <div class="pro-nav-l">
+                        <ul class="clearfix nav-top">
+                            <!-- 凑单品商铺标题-->
+                             <li>
+                                 <a href="javascript:;" class="shopname1"><span>京东</span><i class="fa fa-adn pro-icon"></i></a>
+                                 <div class="pro-show" >
+                                    <!-- 凑单商铺下拉店铺 -->
+                                    <ul class="clearfix">
+                                            <!-- 模板引擎渲染下拉列表 -->
+                                    </ul>
+                                </div>
+                            </li>
+                             <li>
+                                 <a href="javascript:;" class="shopname2"><span>华北</span><i class="fa fa-adn pro-icon"></i></a>
+                                 <div class="area">
+                                        <!-- 店铺区域 -->
+                                        <ul>
+                                              <!-- 模板引擎渲染城市区域 -->
+                                        </ul>
+                                    </div> 
+                             </li>
+                             <li>
+                                 <a href="javascript:;" class="shopname3"><span >全部价格</span><i class="fa fa-adn pro-icon"></i></a>
+                                 <div class="select-price">
+                                        <ul>
+                                            <li><a href="#">全部价格</a></li>
+                                        </ul>
+                                    </div>  
+                             </li>
+                        </ul>
+                    </div>
+                   
+                   
+                   
+                </div>
+           </div>
+           <div class="product-content">
+               <ul class="clearfix">
+                          <!-- 商品清单列表渲染 -->
+                   <li class="content-pro">
+                        <a href="#" class="con-list">
+                            <div class="pic"><img src="./images/cuxiao.jpg" alt=""></div>
+                            <div class="title">廿一客(21cake)专用餐具 1人份(不单独配送)</div>
+                            <div class="other clearfix">
+                                <div class="price">&yen;0.50</div>
+                                <div class="btn">去凑单</div>
+                            </div>
+                        </a>
+                    </li>
+  
+               </ul>
+           </div>
+        </main>
+       <!-- 底部区域 -->
+       <div class="footer">
+            <div class="foot-top">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#" class="icon_top"><img src="./images/top.jpg" >返回顶部</a>
+            </div>
+            <div class="footer-bottom">
+                <p><span>手机APP下载</span> 慢慢买手机版 -- 掌上平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>  
+    </div>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script> 
+<script src="./js/common.js"></script>
+<script src="./js/gsproduct.js"></script>
+
+
+<!-- 下拉列表1 的渲染 -->
+<script type="text/html" id="mallTpl">
+{{each result v i}}
+   
+     <li ><a href="javascript:;"data-id="{{v.shopId}}" >{{v.shopName}}</a></li>
+   
+{{/each}}
+</script>
+
+<!-- 下拉列表区域的渲染 -->
+<script type="text/html" id="areaTpl">
+{{each result v i}}
+
+    <li><a href="#" data-id = "{{v.areaId}}">{{v.areaName}}</a></li>
+   
+{{/each}}
+</script>
+
+<!-- 凑单商品列表清单 -->
+<script type="text/html" id="prolistTpl">
+    {{each result v i}}
+    <li class="content-pro">
+            <a href="#" class="con-list">
+                <div class="pic"><img src="{{v.productImg}}" alt=""></div>
+                <div class="title">{{v.productName}}</div>
+                <div class="other clearfix">
+                    <div class="price">{{v.productPrice}}</div>
+                    <div class="btn">去凑单</div>
+                </div>
+            </a>
+        </li>
+     {{/each}}   
+</script>
+</body>    

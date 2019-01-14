@@ -1,0 +1,92 @@
+.product-list-title {
+  background-color: #ebebeb;
+  height: 0.50666667rem;
+  background-image: linear-gradient(to bottom, #ebebeb, #ffffff, #cccccc);
+  border-top: 0.01333333rem solid #ebebeb;
+  border-bottom: 0.01333333rem solid #cccccc;
+  line-height: 0.48rem;
+  padding-left: 0.10666667rem;
+  font-size: 0.18666667rem;
+}
+.product-list-title .select {
+  float: right;
+  margin-right: 0.10666667rem;
+  height: 0.37333333rem;
+  line-height: 0.37333333rem;
+  display: block;
+  background-color: #d0d0d0;
+  background: linear-gradient(to bottom, #d7d7d7, #f5f5f5);
+  border-bottom: 0.01333333rem solid #bababa;
+  padding: 0 0.21333333rem;
+  box-shadow: 0 0.01333333rem 0.02666667rem #888888;
+  text-align: center;
+  border-radius: 0.06666667rem;
+  font-size: 0.18666667rem;
+  margin-top: 0.05333333rem;
+  border: none;
+}
+.list-product {
+  background-color: #fff;
+  width: 100%;
+}
+.list-product a {
+  display: block;
+}
+.list-product li {
+  padding: 0.2rem;
+  border-bottom: 0.01333333rem solid #cccccc;
+}
+.list-product li .pro-img {
+  float: left;
+  width: 1.46666667rem;
+}
+.list-product li .pro-img img {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+}
+.list-product li .info {
+  width: 80%;
+  float: left;
+  padding-left: 0.2rem;
+  height: 1.33333333rem;
+}
+.list-product li .info .price {
+  margin-top: 0.33333333rem;
+  font-size: 0.24rem;
+  color: #ea3900;
+  vertical-align: middle;
+}
+.list-product li .info .other {
+  margin-top: 0.13333333rem;
+  font-size: 0.16rem;
+  color: #a1a1a1;
+}
+.list-product li .info .other em:first-child {
+  margin-right: 0.13333333rem;
+}
+/*分页*/
+.page {
+  margin-top: 0.13333333rem;
+  background-color: #fff;
+}
+.page .w33 {
+  width: 33.3%;
+  float: left;
+  text-align: center;
+}
+.page a {
+  background-color: #d4d4d4;
+  background: linear-gradient(to bottom, #f1f1f1, #d4d4d4);
+  border-radius: 0.06666667rem;
+  line-height: 0.42666667rem;
+  font-size: 0.18666667rem;
+  padding: 0.10666667rem 0.26666667rem;
+  box-shadow: 0 0 0.01333333rem #666666;
+  text-align: center;
+}
+#selectPage {
+  border: 0.01333333rem solid #bababa;
+  font-size: 0.21333333rem;
+  height: 0.48rem;
+  padding: 0.10666667rem 0.2rem;
+}
