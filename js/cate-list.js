@@ -23,9 +23,8 @@ $.ajax({
             success:function(info){
                 console.log(info)
                 var htmlStr = template("catelistTpl",info);
-                console.log(htmlStr)
                 content.html(htmlStr)
-            }
+             }
           })
           
         })

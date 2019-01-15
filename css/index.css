@@ -1701,6 +1701,59 @@ a.gotop {
   margin-top: 0.04rem;
   font-size: 0.18666667rem;
 }
+.brand-con {
+  height: 0.66666667rem;
+}
+.brand-con p {
+  width: 100%;
+  height: 0.66666667rem;
+  background-color: #ededed;
+  border-top: 0.02666667rem solid #bcbcbc;
+  border-bottom: 0.02666667rem solid #bcbcbc;
+  font-size: 0.18666667rem;
+  line-height: 0.66666667rem;
+  padding-left: 0.2rem;
+  color: #874604;
+  font-weight: bold;
+}
+.com-tit-info {
+  padding: 0.13333333rem;
+  font-size: 0.21333333rem;
+  padding-left: 0.13333333rem;
+}
+.com-tit-info .span {
+  height: 0.53333333rem;
+  line-height: 0.53333333rem;
+  color: #666;
+}
+.com-tit-info .span span:nth-child(2) {
+  float: right;
+  padding-right: 0.2rem;
+}
+.com-tit-info .txt {
+  line-height: 1.6;
+  background-color: #ededed;
+  font-size: 16 75rem;
+  position: relative;
+}
+.com-tit-info .txt::after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: .8rem;
+  top: -0.2rem;
+  border-bottom: .2rem solid #e7e7e7;
+  border-left: .2rem solid transparent;
+  border-right: .2rem solid transparent;
+}
+/*五角星专栏*/
+.star {
+  text-align: right;
+}
+.star .fa {
+  color: orange;
+}
 /*导航栏*/
 .nav {
   background-color: #F1F1F1;

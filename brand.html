@@ -38,11 +38,56 @@
             <a href="index.html">首页></a>
             <a href="category.html">全部分类></a>
         </nav>
-        <div class="best-brand">平板电视哪个牌子好</div>
+        <div class="best-brand"><span class="content">平板电视</span>哪个牌子好</div>
         <div class="brand-list">
-            <ul class="brand-list-tit">
+            <ul class="brand-list-tit clearfix">
                     <!-- 模板引擎渲染 -->
             </ul>
+        </div>
+        <!-- 电视产品销量 -->
+        <div class="brand-con">
+            <a href="javascript:;">
+                <p><span class="content">平板电视</span>产品销量排行</p>
+            </a>
+        </div>
+        <!-- 产品销量排行 -->
+        <div class="list-product">
+                <ul class="list-pro-tem" id="list-pro-tem">
+                    <li class="clearfix">
+                        <a href="#" >
+                            <div class="pro-img fl"><img src="./images/cuxiao.jpg" alt=""></div>
+                            <div class="info">
+                                <a href="#" >乐视TV高清高频分辨率</a>
+                                <div class="price">
+                                    <em>￥4088</em>
+                                </div>
+                                <div class="other">
+                                    <em>报价(6)</em>
+                                    <em>评论(2286)</em>
+                                    <div class="star">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                            </div> 
+                        </a>
+                    </li>   
+                </ul>
+        </div>
+        <!-- 电视产品销量 -->
+        <div>
+            <div class="brand-con " id="new-comment">
+                <a href="javascript:;">
+                    <p><span class="content">平板电视最新评论</span></p>
+                </a>
+            </div>
+            <div class="list-product" id="coment-info">
+                  <!-- 渲染 -->
+            </div>
         </div>
      </main>
 
@@ -65,10 +110,12 @@
 <script src="./lib/artTemplate/template-web.js"></script> 
 <script src="./js/common.js"></script>
 <script src="./js/brand.js"></script>   
+
+<!-- 商品排行渲染 -->
 <script type="text/html" id="brandTpl">
 {{each result v i}}
     <li class="brand-info">
-            <a href="productList.html?categoryid={{v.brandTitleId}}">
+            <a href="productList.html?categoryid={{v.brandTitleId}}&pageid=1">
                 {{if i === 0}}
                 <em class="top1">{{i+1}}</em>
                 {{else if i===1}}
@@ -87,4 +134,69 @@
         </li>
 {{/each}}
 </script> 
+
+<!-- 商品清单的渲染 -->
+<script type="text/html" id="list_tmp">
+{{each result v i}}
+    <li class="clearfix" data-id="{{v.productId}}">
+            <a href="bijia.html?productId={{v.productId}}" >
+                <div class="pro-img fl">{{# v.productImg}}</div>
+                <div class="info">
+                    <a href="#" >{{v.productName}}</a>
+                    <div class="price">
+                        <em>{{v.productPrice}}</em>
+                    </div>
+                    <div class="other">
+                        <em>{{v.productQuote}}</em>
+                        <em>{{v.productCom}}</em>
+                        <div class="star">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                         </div>
+                    </div>
+                </div> 
+            </a>
+        </li> 
+{{/each}}
+</script>
+
+
+<!-- 评论列表的渲染 -->
+<script type="text/html" id="con_tmp">
+{{each result v i}}
+    <ul class="list-pro-tem clearfix">
+            <li class="clearfix" style="border-bottom:none">
+                <a href="#" style="display:blcok;width:100%;height:100%" >
+                    <div class="pro-img fl"><img src="{{v.img}}" alt=""></div>
+                    <div class="info">
+                       <p style="font-size:14px">{{v.text}}</p>
+                    </div> 
+                </a>
+            </li>   
+        </ul>
+        <div class="com-tit-info">
+            <div class="com-info-right">
+                  <div class="span">
+                        <span>{{v.comName}}</span>
+                        <span>{{v.comTime}}</span>
+                  </div>
+                  <div class="star">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                     </div>
+                  <div class="txt">
+                        {{v.comContent}}
+                    </div>
+            </div>
+    </div>
+{{/each}}
+</script>
 </body>

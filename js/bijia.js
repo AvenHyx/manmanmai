@@ -2,10 +2,42 @@
 
 //做页面渲染页面
 
- var url = new UrlSearch(); 
- var id = url.productId;
- var categoryid = url.categoryid;
- console.log(id) 
+//  var url = new UrlSearch(); 
+//  var id = url.productid;
+// var categoryid = url.categoryid;
+// console.log(id) 
+
+// function url(k){
+//     var url = location.href;
+//     url = decodeURI(url);
+//     url = url.split("/")[6];
+//     var str = url.split("?")[1];
+//     str =  str.split("&")
+//     var obj = {};
+//     str.forEach(function(v,i){
+//    var key = v.split("=")[0];
+//    var val =v.split("=")[1];
+//    obj[key]=val
+//     })
+//     return obj[k];
+// }
+
+function url(k){
+        var url = location.href;
+            url = decodeURI(url);
+        str = url.split("?")[1];
+        var obj ={};
+        var arr= str.split("&");
+        arr.forEach(function(v,i){
+        var key = v.split("=")[0];
+        var val = v.split("=")[1];
+        obj[key] = val
+    })
+   return obj[k]
+  }
+var id = url("productId");
+var categoryid = url("categoryid");
+console.log(id)
 
  $.ajax({
      type:"get",
